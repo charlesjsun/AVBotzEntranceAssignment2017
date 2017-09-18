@@ -1,0 +1,6 @@
+Monte Carlo Localization
+
+Monte Carlo Localization, or MCL, is a way for a robot to determine it's position in space using a particle filter, or just a bunch of particles. 
+
+Given a map, it generates a certain amount of particles, uniformly randomly distributed amongst the map. Each particle represents an equal probability of where the robot is at that instance. Then for every time step (and maybe some amount of motion) it will gather sensor input, then give a weight to each particle as to how likely each particle location will create the same sensor input. Then the robot regenerates the particles, but this time around the previous particles with more weight. This process of gathering input and then resampling the particles is repeated for each time step, and as time increases, the particles should get clumped together, which represent that the robot is more and more certain of its position, thus it has localized.
+
