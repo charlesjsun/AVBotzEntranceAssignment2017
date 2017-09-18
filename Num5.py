@@ -30,7 +30,7 @@ def main():
 
 		# System Time Loop Controls
 		curr_time = time.time()
-		delta_time = curr_time - prev_time  # don't be alarmed this actually works Python scopes are weird
+		delta_time = curr_time - prev_time
 		prev_time = time.time()
 
 		# PID
